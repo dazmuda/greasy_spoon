@@ -1,0 +1,14 @@
+<h1>All customers of the Greasy Spoon:</h1>
+
+<% @customers.each do |customer| %>
+
+	<h2><%= link_to "#{customer.first_name} #{customer.last_name} at Table #{customer.table_number}", customer_path(customer) %></h2>
+
+	<% customer.orders.each do |order| %>
+		<li><%= link_to "#{order.dish} for $#{order.price}", order_path(order) %></li>
+	<% end%>
+	
+<% end %>
+
+<br>
+<%= link_to "Create a new customer", new_customer_path %>

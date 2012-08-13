@@ -1,0 +1,12 @@
+<h1><%= "#{@customer.first_name} #{@customer.last_name} at Table #{@customer.table_number}" %></h1>
+This person is customer number: <%= @customer.id %> <br>
+
+<% @customer.orders.each do |order| %>
+	<li>
+		<%= order.dish %><br>
+		<%= link_to "Edit this order", edit_order_path(order) %>
+	</li>
+<% end%>
+
+<%= link_to "Edit this customer", edit_customer_path %> <br>
+<%= link_to "Add an order to this customer", new_order_path %>

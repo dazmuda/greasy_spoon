@@ -1,0 +1,6 @@
+<h1><%= @order.dish %></h1>
+
+This order should go to <%= link_to "#{Customer.find(@order.customer_id).first_name} #{Customer.find(@order.customer_id).last_name}", customer_path(@order.customer_id) %>
+
+<br><br>
+<%= link_to "Edit this order", edit_order_path %>

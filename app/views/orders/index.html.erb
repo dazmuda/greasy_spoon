@@ -1,0 +1,10 @@
+<h1>All the orders to fill:</h1>
+
+<% @orders.each do |order|%>
+
+	<li><%= link_to "#{order.dish}", order_path(order) %></li>
+	
+<% end %>
+
+<br>
+<%= link_to "Create a new order", new_order_path %>

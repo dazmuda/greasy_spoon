@@ -1,0 +1,16 @@
+<h1>Create a new order:</h1>
+
+<%= form_for(@order) do |f| %>
+
+	<%= f.label :dish, "Dish:" %>
+	<%= f.text_field :dish %>
+	<br>
+	<%= f.label :price, "Price:" %>
+	<%= f.text_field :price %>
+	<br>
+	<%= f.label :customer_id, "Customer:" %>
+	<%= f.text_field :customer_id %>
+	<br>
+	<%= f.submit "Go go Greasy Spoon!" %>
+
+<% end %>

@@ -1,0 +1,19 @@
+<h1>Edit this order:</h1>
+
+<%= form_for(@order) do |f| %>
+
+	<%= f.label :dish, "Change dish:" %>
+	<%= f.text_field :dish %>
+	<br>
+	<%= f.label :price, "Change price:" %>
+	<%= f.text_field :price %>
+	<br>
+	<%= f.label :customer_id, "Change customer:" %>
+	<%= f.text_field :customer_id %>
+	<br>
+	<%= f.submit "Go go Greasy Spoon!" %>
+
+<% end %>
+
+<br>
+<%= link_to "Delete order", @order, method: :delete, data: { confirm: "You sure?" } %>
